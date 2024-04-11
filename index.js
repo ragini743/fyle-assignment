@@ -55,9 +55,13 @@ document.getElementById("submitButton").addEventListener("click", function(event
 
 // hide modal
 function closeToModal () {
-    document.getElementById("modal").style.display = "hidden";
+    console.log("helllll")
+    document.getElementById("modal").style.display = "none";
 };
-const 
+const closeModal = document.getElementById("closeModal") ;
+console.log("closeModal",closeModal) ;
+
+closeModal.addEventListener("click",() =>closeToModal())
 
 
 
