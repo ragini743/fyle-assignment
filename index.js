@@ -4,7 +4,7 @@ var grossIncome, extraIncome, deductions, age;
 
 // Function to validate and update error messages for gross income
 function validateGrossIncome() {
-    var grossIncome = document.getElementById("grossIncome").value;
+     grossIncome = document.getElementById("grossIncome").value;
     var grossIncomeError = document.getElementById("grossIncomeError");
 
     if (!grossIncome || isNaN(grossIncome) || grossIncome <= 0) {
@@ -17,7 +17,7 @@ function validateGrossIncome() {
   // Function to validate and update error messages for extra income
 
   function validateExtraIncome() {
-    var extraIncome = document.getElementById("extraIncome").value;
+     extraIncome = document.getElementById("extraIncome").value;
     var extraIncomeError = document.getElementById("extraIncomeError");
 
     if (!extraIncome || isNaN(extraIncome) || extraIncome < 0) {
@@ -30,7 +30,7 @@ function validateGrossIncome() {
 
   // Function to validate and update error messages for deductions
   function validateDeductions() {
-    var deductions = document.getElementById("deductions").value;
+     deductions = document.getElementById("deductions").value;
     var deductionsError = document.getElementById("deductionsError");
 
     if (!deductions || isNaN(deductions) || deductions < 0) {
@@ -43,7 +43,7 @@ function validateGrossIncome() {
 
   // Function to validate and update error messages for age
   function validateAge() {
-    var age = document.getElementById("age").value;
+     age = document.getElementById("age").value;
     var ageError = document.getElementById("ageError");
 
     if (!age) {
@@ -105,8 +105,19 @@ document
         validateAge();
       console.log(document.querySelectorAll(".error"))
         // Check if any errors exist
-        if (document.querySelectorAll(".error").length > 0) return;
-    calculateTax(); // Call your function to calculate tax
+        const grossIncomeError = document.getElementById("grossIncomeError").style.display;
+        const extraIncomeError = document.getElementById("extraIncomeError").style.display;
+        const deductionsError = document.getElementById("deductionsError").style.display;
+        const ageError = document.getElementById("ageError").style.display;
+        
+        if (grossIncomeError === "inline" || extraIncomeError === "inline" || deductionsError === "inline" || ageError === "inline") {
+            // There are errors in the form, do not open the modal
+            return;
+          }
+   
+            calculateTax();
+    
+     // Call your function to calculate tax
     // displayResultModal(/* Pass tax amount as needed */); // Call function to display the modal
   });
 
