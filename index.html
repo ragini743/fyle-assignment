@@ -30,20 +30,21 @@
     </div>
     <div class="container  col-md-8 position-relative col-lg-5" >
       <form id="taxCalculatorForm">
-        <div class="mb-3 position-relative">
+        <div class="mb-3">
           <label for="grossIncome" class="form-label fw-bold custom-text-color"
             >Gross Annual Income:</label
           >
         
-          <div class="d-flex">
-            <input type="number" class="form-control      w-95" id="grossIncome" required />
+          <div class="position-relative d-flex inner-container " >
+            <input type="number" class="form-control w-95 custom-input" id="grossIncome" required />
+         
             <div
               id="grossIncomeError"
               class="form-text error "
-              style="display: none ; width:5% ;"
+              style="display: none ; width:5% ; "
             >
             <span class="hover-text ">Please enter a valid gross income.</span>
-                <img src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg" class="w-100 h-100 img-fluid">
+                <img src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg" class="w-100 img-fluid">
             
             </div>
           </div>
@@ -51,15 +52,15 @@
         </div>
         <div class="mb-3">
           <label for="extraIncome" class="form-label fw-bold custom-text-color">Extra Income:</label>
-          <div class="d-flex">
-            <input type="number" class="form-control w-95" id="extraIncome" />
+          <div class="position-relative d-flex inner-container ">
+            <input type="number" class="form-control  w-95 custom-input" id="extraIncome" />
             <div
               id="extraIncomeError"
               class="form-text error"
               style="display: none ; width:5% ;"
             >
             <span class="hover-text ">Please enter a extra income.</span>
-            <img src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg" class="w-100 h-100 img-fluid">
+            <img src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg" class="w-100  img-fluid">
               
             </div>
           </div>
@@ -67,15 +68,15 @@
         </div>
         <div class="mb-3">
           <label for="deductions" class="form-label fw-bold custom-text-color">Deductions:</label>
-          <div class="d-flex">
-            <input type="number" class="form-control w-95" id="deductions" />
+          <div class="position-relative d-flex inner-container ">
+            <input type="number" class="form-control  w-95 custom-input" id="deductions" />
             <div
               id="deductionsError"
               class="form-text error"
               style="display: none ; width:5% ;"
             >
             <span class="hover-text ">Please enter a valid deductions.</span>
-            <img src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg" class="w-100 h-100 img-fluid">
+            <img src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg" class="w-100  img-fluid">
              
             </div>
           </div>
@@ -83,7 +84,7 @@
         </div>
         <div class="mb-3">
           <label for="age" class="form-label fw-bold custom-text-color">Age:</label>
-          <select class="form-select " id="age">
+          <select class="form-select inner-container " id="age">
             <option value="<40">&lt; 40</option>
             <option value="≥40 & <60">&ge; 40 &lt; 60</option>
             <option value="≥60">&ge; 60</option>
