@@ -1,77 +1,67 @@
 console.log("hello");
-// Declare variables outside of calculateTax function
+
 var grossIncome, extraIncome, deductions, age;
 
-// Function to validate and update error messages for gross income
 function validateGrossIncome() {
-     grossIncome = document.getElementById("grossIncome").value;
-    var grossIncomeError = document.getElementById("grossIncomeError");
+  grossIncome = document.getElementById("grossIncome").value;
+  var grossIncomeError = document.getElementById("grossIncomeError");
 
-    if (!grossIncome || isNaN(grossIncome) || grossIncome <= 0) {
-      grossIncomeError.style.display = "inline";
-    } else {
-      grossIncomeError.style.display = "none";
-    }
+  if (!grossIncome || isNaN(grossIncome) || grossIncome <= 0) {
+    grossIncomeError.style.display = "inline";
+  } else {
+    grossIncomeError.style.display = "none";
   }
+}
 
-  // Function to validate and update error messages for extra income
+function validateExtraIncome() {
+  extraIncome = document.getElementById("extraIncome").value;
+  var extraIncomeError = document.getElementById("extraIncomeError");
 
-  function validateExtraIncome() {
-     extraIncome = document.getElementById("extraIncome").value;
-    var extraIncomeError = document.getElementById("extraIncomeError");
-
-    if (!extraIncome || isNaN(extraIncome) || extraIncome < 0) {
-      extraIncomeError.style.display = "inline";
-    } else {
-      extraIncomeError.style.display = "none";
-    }
-    console.log(extraIncomeError)
+  if (!extraIncome || isNaN(extraIncome) || extraIncome < 0) {
+    extraIncomeError.style.display = "inline";
+  } else {
+    extraIncomeError.style.display = "none";
   }
+  console.log(extraIncomeError);
+}
 
-  // Function to validate and update error messages for deductions
-  function validateDeductions() {
-     deductions = document.getElementById("deductions").value;
-    var deductionsError = document.getElementById("deductionsError");
+function validateDeductions() {
+  deductions = document.getElementById("deductions").value;
+  var deductionsError = document.getElementById("deductionsError");
 
-    if (!deductions || isNaN(deductions) || deductions < 0) {
-      deductionsError.style.display = "inline";
-    } else {
-      deductionsError.style.display = "none";
-    }
-    console.log(deductionsError)
+  if (!deductions || isNaN(deductions) || deductions < 0) {
+    deductionsError.style.display = "inline";
+  } else {
+    deductionsError.style.display = "none";
   }
+  console.log(deductionsError);
+}
 
-  // Function to validate and update error messages for age
-  function validateAge() {
-     age = document.getElementById("age").value;
-    var ageError = document.getElementById("ageError");
+function validateAge() {
+  age = document.getElementById("age").value;
+  var ageError = document.getElementById("ageError");
 
-    if (!age) {
-      ageError.style.display = "inline";
-    } else {
-      ageError.style.display = "none";
-    }
-    console.log(ageError)
+  if (!age) {
+    ageError.style.display = "inline";
+  } else {
+    ageError.style.display = "none";
   }
+  console.log(ageError);
+}
 
-  // Event listeners for input fields to trigger validation
-  document
-    .getElementById("grossIncome")
-    .addEventListener("input", validateGrossIncome);
-  document
-    .getElementById("extraIncome")
-    .addEventListener("input", validateExtraIncome);
-  document
-    .getElementById("deductions")
-    .addEventListener("input", validateDeductions);
-  document.getElementById("age").addEventListener("change", validateAge);
-
-
-
+// Event listeners for input fields to trigger validation
+document
+  .getElementById("grossIncome")
+  .addEventListener("input", validateGrossIncome);
+document
+  .getElementById("extraIncome")
+  .addEventListener("input", validateExtraIncome);
+document
+  .getElementById("deductions")
+  .addEventListener("input", validateDeductions);
+document.getElementById("age").addEventListener("change", validateAge);
 
 function calculateTax() {
-
-  // Calculate tax based on provided formula
   var tax = 0;
   var taxableIncome =
     parseFloat(grossIncome) + parseFloat(extraIncome) - parseFloat(deductions);
@@ -98,30 +88,34 @@ document
   .getElementById("submitButton")
   .addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
-        // Validate input fields
-        validateGrossIncome();
-        validateExtraIncome();
-        validateDeductions();
-        validateAge();
-      console.log(document.querySelectorAll(".error"))
-        // Check if any errors exist
-        const grossIncomeError = document.getElementById("grossIncomeError").style.display;
-        const extraIncomeError = document.getElementById("extraIncomeError").style.display;
-        const deductionsError = document.getElementById("deductionsError").style.display;
-        const ageError = document.getElementById("ageError").style.display;
-        
-        if (grossIncomeError === "inline" || extraIncomeError === "inline" || deductionsError === "inline" || ageError === "inline") {
-            // There are errors in the form, do not open the modal
-            return;
-          }
-   
-            calculateTax();
-    
-     // Call your function to calculate tax
-    // displayResultModal(/* Pass tax amount as needed */); // Call function to display the modal
+
+    validateGrossIncome();
+    validateExtraIncome();
+    validateDeductions();
+    validateAge();
+
+    // Check if any errors exist
+    const grossIncomeError =
+      document.getElementById("grossIncomeError").style.display;
+    const extraIncomeError =
+      document.getElementById("extraIncomeError").style.display;
+    const deductionsError =
+      document.getElementById("deductionsError").style.display;
+    const ageError = document.getElementById("ageError").style.display;
+
+    if (
+      grossIncomeError === "inline" ||
+      extraIncomeError === "inline" ||
+      deductionsError === "inline" ||
+      ageError === "inline"
+    ) {
+      // There are errors in the form, do not open the modal
+      return;
+    }
+
+    calculateTax();
   });
 
-// hide modal
 function closeToModal() {
   document.getElementById("modal").style.display = "none";
   clearFormFields();
@@ -137,6 +131,5 @@ function clearFormFields() {
 }
 
 const closeModal = document.getElementById("closeModal");
-// console.log("closeModal", closeModal);
 
 closeModal.addEventListener("click", () => closeToModal());

@@ -15,45 +15,48 @@
   overflow: hidden;
 }
 .custom-text-color {
-  color: #5b5757; /* Replace with your desired color code */
+  color: #5b5757;
 }
 /* Initially hide the error text */
 .hover-text {
   display: none;
 }
+
 /* Show the error text when hovering over the error container */
 .form-text.error:hover .hover-text {
   display: inline;
   position: absolute;
   width: 100%;
   top: -25px;
-  left:100px;
+  left: 100px;
   right: 0;
   text-align: right;
   color: rgb(249, 98, 98);
   text-align: right;
 }
 
-.custom-input{
-    outline: none;
-    box-shadow: none;
-    border: none !important;
-    box-shadow:none;
-    border-radius: 15px  !important;
+.custom-input {
+  outline: none;
+  box-shadow: none;
+  border: none !important;
+  box-shadow: none;
+  border-radius: 15px !important;
 }
 
 /* CSS to remove the increment and decrement arrows */
 .custom-input::-webkit-inner-spin-button,
 .custom-input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
-.inner-container{
-  border:1px solid rgb(168, 166, 166);
+.inner-container {
+  border: 1px solid rgb(168, 166, 166);
   border-radius: 10px;
 }
-.inner-container:hover{
-  box-shadow:0 0 10px  thistle;
-  
-
+.inner-container:hover {
+  box-shadow: 0 0 10px thistle !important;
+}
+.custom-input:focus {
+  box-shadow: none;
+  outline: none;
 }

@@ -10,86 +10,103 @@
       crossorigin="anonymous"
     />
     <title>Tax calculator</title>
-    <style>
-  
-
-
-
-
-    </style>
-    <link rel="stylesheet"href="style.css">
+    <style></style>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="./index.js" async></script>
   </head>
 
-
   <body>
-    <div class="container text-center fw-bold fs-2 mb-4">
-        Tax calculator
-    </div>
-    <div class="container  col-md-8 position-relative col-lg-5" >
+    <div class="container text-center fw-bold fs-2 mb-4">Tax calculator</div>
+    <div class="container col-md-8 position-relative col-lg-5">
       <form id="taxCalculatorForm">
         <div class="mb-3">
           <label for="grossIncome" class="form-label fw-bold custom-text-color"
             >Gross Annual Income:</label
           >
-        
-          <div class="position-relative d-flex inner-container " >
-            <input type="number" class="form-control w-95 custom-input" id="grossIncome" required />
-         
+
+          <div class="position-relative d-flex inner-container">
+            <input
+              type="number"
+              class="form-control w-95 custom-input"
+              id="grossIncome"
+              required
+            />
+
             <div
               id="grossIncomeError"
-              class="form-text error "
-              style="display: none ; width:5% ; "
+              class="form-text error"
+              style="display: none; width: 5%"
             >
-            <span class="hover-text ">Please enter a valid gross income.</span>
-                <img src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg" class="w-100 img-fluid">
-            
+              <span class="hover-text">Please enter a valid gross income.</span>
+              <img
+                src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg"
+                class="w-100 img-fluid"
+              />
             </div>
           </div>
-          
         </div>
         <div class="mb-3">
-          <label for="extraIncome" class="form-label fw-bold custom-text-color">Extra Income:</label>
-          <div class="position-relative d-flex inner-container ">
-            <input type="number" class="form-control  w-95 custom-input" id="extraIncome" />
+          <label for="extraIncome" class="form-label fw-bold custom-text-color"
+            >Extra Income:</label
+          >
+          <div class="position-relative d-flex inner-container">
+            <input
+              type="number"
+              class="form-control w-95 custom-input"
+              id="extraIncome"
+            />
             <div
               id="extraIncomeError"
               class="form-text error"
-              style="display: none ; width:5% ;"
+              style="display: none; width: 5%"
             >
-            <span class="hover-text ">Please enter a extra income.</span>
-            <img src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg" class="w-100  img-fluid">
-              
+              <span class="hover-text">Please enter a extra income.</span>
+              <img
+                src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg"
+                class="w-100 img-fluid"
+              />
             </div>
           </div>
-        
         </div>
         <div class="mb-3">
-          <label for="deductions" class="form-label fw-bold custom-text-color">Deductions:</label>
-          <div class="position-relative d-flex inner-container ">
-            <input type="number" class="form-control  w-95 custom-input" id="deductions" />
+          <label for="deductions" class="form-label fw-bold custom-text-color"
+            >Deductions:</label
+          >
+          <div class="position-relative d-flex inner-container">
+            <input
+              type="number"
+              class="form-control w-95 custom-input"
+              id="deductions"
+            />
             <div
               id="deductionsError"
               class="form-text error"
-              style="display: none ; width:5% ;"
+              style="display: none; width: 5%"
             >
-            <span class="hover-text ">Please enter a valid deductions.</span>
-            <img src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg" class="w-100  img-fluid">
-             
+              <span class="hover-text">Please enter a valid deductions.</span>
+              <img
+                src=" https://t3.ftcdn.net/jpg/02/97/73/42/360_F_297734214_IbEci8CMShXg0L71F9YRYhJclm7E7LFG.jpg"
+                class="w-100 img-fluid"
+              />
             </div>
           </div>
-        
         </div>
         <div class="mb-3">
-          <label for="age" class="form-label fw-bold custom-text-color">Age:</label>
-          <select class="form-select inner-container " id="age">
+          <label for="age" class="form-label fw-bold custom-text-color"
+            >Age:</label
+          >
+          <select
+            class="form-select inner-container"
+            style="outline: none; box-shadow: none"
+            id="age"
+          >
             <option value="<40">&lt; 40</option>
             <option value="≥40 & <60">&ge; 40 &lt; 60</option>
             <option value="≥60">&ge; 60</option>
           </select>
-          <div id="ageError" class="form-text error " style="display: none">
+          <div id="ageError" class="form-text error" style="display: none">
             Please select an age range.
           </div>
         </div>
