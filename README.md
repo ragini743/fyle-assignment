@@ -8,7 +8,7 @@
 
 #### create validateAge function to validate and update error messages for age .
 
-#### validateGrossIncome ,validateExtraIncome , validateDeductions and validateAge for each function add event listener for input fields so it triggers validation . I developed different validation for different input fields so that all fields did't depend upon each other  .if our user at first input fiels and not enter anything or try to enter string then that input will show error and other fields will have  in its previous state . if user fell first input and submit form then user got error in second and third input vice-verca .
+#### validateGrossIncome ,validateExtraIncome , validateDeductions and validateAge for each function add event listener for input fields so it triggers validation . I developed different validation for different input fields so that all fields did't depend upon each other  .if our user at first input fiels and tried to enter string then that input will show error and other fields will have  in its previous state . if user filled first input and submit form then user got error in second and third input vice-verca .
 
 #### create a calculateTax function to Calculate tax based on provided formula
 

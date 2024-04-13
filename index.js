@@ -22,7 +22,7 @@ function validateExtraIncome() {
   } else {
     extraIncomeError.style.display = "none";
   }
-  console.log(extraIncomeError);
+ 
 }
 
 function validateDeductions() {
@@ -34,19 +34,21 @@ function validateDeductions() {
   } else {
     deductionsError.style.display = "none";
   }
-  console.log(deductionsError);
+
 }
 
 function validateAge() {
-  age = document.getElementById("age").value;
-  var ageError = document.getElementById("ageError");
+    age = document.getElementById("age").value;
 
-  if (!age) {
+  var ageError = document.getElementById("ageError");
+ 
+
+  if (!age|| isNaN(age) || age < 0) {
     ageError.style.display = "inline";
   } else {
     ageError.style.display = "none";
   }
-  console.log(ageError);
+  // console.log(ageError);
 }
 
 // Event listeners for input fields to trigger validation
@@ -124,10 +126,12 @@ function clearFormFields() {
   document.getElementById("grossIncome").value = "";
   document.getElementById("extraIncome").value = "";
   document.getElementById("deductions").value = "";
+  document.getElementById("age").value = "";
 
   document.getElementById("grossIncomeError").style.display = "none";
   document.getElementById("extraIncomeError").style.display = "none";
   document.getElementById("deductionsError").style.display = "none";
+  document.getElementById("ageError").style.display = "none";
 }
 
 const closeModal = document.getElementById("closeModal");
