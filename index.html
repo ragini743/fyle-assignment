@@ -22,9 +22,17 @@
     <div class="container col-md-8 position-relative col-lg-5">
       <form id="taxCalculatorForm">
         <div class="mb-3">
-          <label for="grossIncome" class="form-label fw-bold custom-text-color"
-            >Gross Annual Income:</label
-          >
+          <label
+            for="grossIncome"
+            class="form-label fw-bold custom-text-color d-flex align-items-center mb-4 position-relative"
+            >Gross Annual Income:
+            <div class="circle-icon">
+              <span style="font-size: 7px">?</span>
+            <span class="hover-text">annual income</span>
+
+            </div>
+
+          </label>
 
           <div class="position-relative d-flex inner-container">
             <input
@@ -48,8 +56,14 @@
           </div>
         </div>
         <div class="mb-3">
-          <label for="extraIncome" class="form-label fw-bold custom-text-color"
-            >Extra Income:</label
+          <label for="extraIncome" class="form-label fw-bold custom-text-color d-flex align-items-center mb-4 position-relative"
+            >Extra Income:
+            <div class="circle-icon">
+              <span style="font-size: 7px">?</span>
+            <span class="hover-text">extra income</span>
+
+            </div>
+            </label
           >
           <div class="position-relative d-flex inner-container">
             <input
@@ -71,8 +85,14 @@
           </div>
         </div>
         <div class="mb-3">
-          <label for="deductions" class="form-label fw-bold custom-text-color"
-            >Deductions:</label
+          <label for="deductions" class="form-label fw-bold custom-text-color d-flex align-items-center mb-4 position-relative"
+            >Deductions:
+            <div class="circle-icon">
+              <span style="font-size: 7px">?</span>
+            <span class="hover-text">money that you spent</span>
+
+            </div>
+            </label
           >
           <div class="position-relative d-flex inner-container">
             <input
@@ -94,8 +114,14 @@
           </div>
         </div>
         <div class="mb-3">
-          <label for="age" class="form-label fw-bold custom-text-color"
-            >Age:</label
+          <label for="age" class="form-label fw-bold custom-text-color d-flex align-items-center mb-4 position-relative"
+            >Age:
+            <div class="circle-icon">
+              <span style="font-size: 7px">?</span>
+            <span class="hover-text">put your age</span>
+
+            </div>
+            </label
           >
           <div class="position-relative d-flex inner-container">
             <input
@@ -115,9 +141,13 @@
               />
             </div>
           </div>
-     
         </div>
-        <button type="button" class="btn btn-primary" id="submitButton">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="submitButton"
+          style="margin-bottom: 20px"
+        >
           Submit
         </button>
       </form>
